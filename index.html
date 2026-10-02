@@ -4,170 +4,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VSS MARKET | Digital Store</title>
+<title>VSS MARKET | Digital Services</title>
 <style>
-* {box-sizing:border-box; margin:0; padding:0}
-body {
-  font-family:Arial,sans-serif;
-  background:#f4f7fc;
-  color:#18243b;
-}
-header {
-  background:linear-gradient(120deg,#101d50,#1268d9);
-  color:white;
-  padding:22px 16px;
-  text-align:center;
-}
-header h1 {font-size:30px;letter-spacing:1px}
-header p {margin-top:8px;color:#dceaff}
-nav {
-  background:#fff;
-  padding:14px 8px;
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  flex-wrap:wrap;
-  box-shadow:0 2px 8px #0001;
-}
-nav a {text-decoration:none;color:#164ca5;font-weight:bold}
-.hero {
-  margin:20px auto;
-  max-width:1000px;
-  padding:45px 20px;
-  text-align:center;
-  background:linear-gradient(120deg,#123a87,#1688ee);
-  color:white;
-  border-radius:16px;
-}
-.hero h2 {font-size:29px;margin-bottom:12px}
-.hero p {line-height:1.6}
-.btn {
-  display:inline-block;
-  background:#16c76a;
-  color:white;
-  padding:13px 22px;
-  margin-top:20px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
-section {padding:22px 16px;max-width:1000px;margin:auto}
-h2.title {text-align:center;margin-bottom:20px;color:#153c87}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
-  gap:14px;
-}
-.item {
-  background:white;
-  padding:22px 10px;
-  text-align:center;
-  border-radius:12px;
-  box-shadow:0 3px 12px #00133312;
-}
-.item .emoji {font-size:34px;margin-bottom:12px}
-.item h3 {font-size:16px;margin-bottom:8px}
-.item p {font-size:13px;color:#667085;line-height:1.5}
-.contact {
-  text-align:center;
-  background:#e7f0ff;
-  padding:28px 15px;
-  border-radius:14px;
-  margin:20px auto;
-}
-footer {
-  background:#101d50;
-  color:white;
-  padding:22px;
-  text-align:center;
-  line-height:1.8;
-  font-size:14px;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#18243b}
+header{background:linear-gradient(120deg,#101d50,#1268d9);color:white;padding:22px 16px;text-align:center}
+header h1{font-size:30px;letter-spacing:1px}
+header p{margin-top:8px;color:#dceaff}
+nav{background:white;padding:14px 8px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;box-shadow:0 2px 8px #0001}
+nav a{text-decoration:none;color:#164ca5;font-weight:bold}
+.hero{margin:20px auto;max-width:1000px;padding:45px 20px;text-align:center;background:linear-gradient(120deg,#123a87,#1688ee);color:white;border-radius:16px}
+.hero h2{font-size:29px;margin-bottom:12px}
+.hero p{line-height:1.6}
+.btn{display:inline-block;background:#16c76a;color:white;padding:13px 22px;margin-top:20px;border:0;border-radius:8px;text-decoration:none;font-weight:bold;cursor:pointer}
+section{padding:22px 16px;max-width:1000px;margin:auto}
+.title{text-align:center;margin-bottom:20px;color:#153c87}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
+.item{background:white;padding:22px 12px;text-align:center;border-radius:12px;box-shadow:0 3px 12px #00133312}
+.service{border:0;width:100%;font-family:inherit;color:inherit;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.service:hover{transform:translateY(-4px);box-shadow:0 6px 18px #00133325}
+.service:focus-visible{outline:3px solid #1688ee;outline-offset:3px}
+.emoji{font-size:38px;margin-bottom:12px}
+.item h3{font-size:16px;margin-bottom:8px}
+.item p{font-size:13px;color:#667085;line-height:1.5}
+.detail{background:white;padding:26px 20px;border-radius:14px;box-shadow:0 3px 12px #00133312;text-align:center}
+.detail .emoji{font-size:55px}
+.detail p{color:#566176;line-height:1.8;margin-top:12px}
+.back{display:inline-block;padding:11px 18px;border:1px solid #164ca5;border-radius:8px;color:#164ca5;background:white;font-weight:bold;cursor:pointer;margin:8px}
+.contact{text-align:center;background:#e7f0ff;padding:28px 15px;border-radius:14px;margin:20px auto}
+footer{background:#101d50;color:white;padding:22px;text-align:center;line-height:1.8;font-size:14px}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>VSS MARKET</h1>
-  <p>Aapki Digital Services, Ab Ek Hi Jagah</p>
+<h1>VSS MARKET</h1>
+<p>Aapki Digital Services, Ab Ek Hi Jagah</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+<a href="#home" onclick="showHome()">Home</a>
+<a href="#services" onclick="showHome()">Services</a>
+<a href="#about" onclick="showHome()">About</a>
+<a href="#contact" onclick="showHome()">Contact</a>
 </nav>
 
+<main id="homePage">
 <div class="hero" id="home">
-  <h2>Welcome To VSS MARKET</h2>
-  <p>Digital services aur products ki jaankari
-  ab aasani se paayein.</p>
-  <a class="btn" href="#services">Explore Services</a>
+<h2>Welcome To VSS MARKET</h2>
+<p>Digital services aur products ki jaankari<br>
+ab aasani se paayein.</p>
+<a class="btn" href="#services">Explore Services</a>
 </div>
 
 <section id="services">
-  <h2 class="title">Our Services</h2>
-  <div class="grid">
-    <div class="item">
-      <div class="emoji">📱</div>
-      <h3>Mobile Recharge</h3>
-      <p>All SIM recharge service ki jaankari.</p>
-    </div>
-    <div class="item">
-      <div class="emoji">💳</div>
-      <h3>AEPS Service</h3>
-      <p>AEPS retailer service ki jaankari.</p>
-    </div>
-    <div class="item">
-      <div class="emoji">🏦</div>
-      <h3>Money Transfer</h3>
-      <p>Money transfer service ki jaankari.</p>
-    </div>
-    <div class="item">
-      <div class="emoji">🛍️</div>
-      <h3>Online Products</h3>
-      <p>Apne products yahan showcase karein.</p>
-    </div>
-    <div class="item">
-      <div class="emoji">📄</div>
-      <h3>PAN Card</h3>
-      <p>PAN application assistance ki jaankari.</p>
-    </div>
-    <div class="item">
-      <div class="emoji">💰</div>
-      <h3>Digital Payment</h3>
-      <p>Digital payment solutions ki jaankari.</p>
-    </div>
-  </div>
+<h2 class="title">Our Services</h2>
+<div class="grid">
+
+<button class="item service" onclick="openService('aeps')">
+<div class="emoji">💳</div>
+<h3>AEPS ID Service</h3>
+<p>AEPS retailer ID ki jaankari ke liye click karein.</p>
+</button>
+
+<button class="item service" onclick="openService('recharge')">
+<div class="emoji">📱</div>
+<h3>Recharge ID</h3>
+<p>All SIM recharge ID ki jaankari ke liye click karein.</p>
+</button>
+
+<button class="item service" onclick="openService('bharatpe')">
+<div class="emoji">🟢</div>
+<h3>BharatPe QR</h3>
+<p>Merchant QR service ki jaankari ke liye click karein.</p>
+</button>
+
+<button class="item service" onclick="openService('gpay')">
+<div class="emoji">📲</div>
+<h3>Google Pay QR Code</h3>
+<p>Business QR ki jaankari ke liye click karein.</p>
+</button>
+
+<button class="item service" onclick="openService('account')">
+<div class="emoji">🏦</div>
+<h3>Account Open Service</h3>
+<p>Account opening assistance ke liye click karein.</p>
+</button>
+
+</div>
 </section>
 
 <section id="about">
-  <h2 class="title">About VSS MARKET</h2>
-  <div class="item">
-    <p>VSS MARKET mein aapka swagat hai.
-    Hamara uddeshya digital services aur
-    products ki jaankari ek hi platform par
-    uplabdh karana hai.</p>
-  </div>
+<h2 class="title">About VSS MARKET</h2>
+<div class="item">
+<p>VSS MARKET mein aapka swagat hai.
+Hamara uddeshya digital services ki jaankari
+ek hi platform par uplabdh karana hai.</p>
+</div>
 </section>
 
 <section id="contact">
-  <div class="contact">
-    <h2>Contact Us</h2>
-    <p>Jankari aur service ke liye WhatsApp karein.</p>
-    <a class="btn"
-       href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET">
-       WhatsApp Now
-    </a>
-  </div>
+<div class="contact">
+<h2>Contact Us</h2>
+<p>Jankari aur service ke liye WhatsApp karein.</p>
+<a class="btn" href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET">
+WhatsApp Now
+</a>
+</div>
 </section>
+</main>
+
+<!-- Service detail page -->
+<main id="detailPage" hidden>
+<section>
+<button class="back" onclick="showHome()">← Back to Services</button>
+<div class="detail">
+<div class="emoji" id="serviceIcon"></div>
+<h2 class="title" id="serviceTitle"></h2>
+<p id="serviceDescription"></p>
+<a class="btn" id="serviceWhatsApp" href="#" target="_blank" rel="noopener">
+WhatsApp Now
+</a>
+<br>
+<button class="back" onclick="showHome()">← All Services</button>
+</div>
+</section>
+</main>
 
 <footer>
-  <h3>VSS MARKET</h3>
-  <p>Digital Services & Online Store</p>
-  <p>© 2026 VSS MARKET. All Rights Reserved.</p>
+<h3>VSS MARKET</h3>
+<p>Digital Services & Online Store</p>
+<p>© 2026 VSS MARKET. All Rights Reserved.</p>
 </footer>
 
+<script>
+const services = {
+  aeps: {
+    icon: "💳",
+    title: "AEPS ID Service",
+    description: "VSS MARKET par AEPS Retailer ID service ki jaankari prapt karein. Aadhaar Enabled Payment System se judi suvidhaon aur ID registration ke liye humse sampark karein."
+  },
+  recharge: {
+    icon: "📱",
+    title: "Recharge ID",
+    description: "Mobile recharge business shuru karne ke liye Recharge ID ki jaankari paayein. All SIM recharge se judi retailer service ke liye WhatsApp karein."
+  },
+  bharatpe: {
+    icon: "🟢",
+    title: "BharatPe QR",
+    description: "Apni dukaan ke liye BharatPe Merchant QR service ki jaankari paayein. QR setup aur merchant account se judi assistance ke liye sampark karein."
+  },
+  gpay: {
+    icon: "📲",
+    title: "Google Pay QR Code",
+    description: "Apne business ke liye Google Pay QR Code ki jaankari paayein. Business QR aur setup assistance ke liye WhatsApp par sampark karein."
+  },
+  account: {
+    icon: "🏦",
+    title: "Account Open Service",
+    description: "Account opening service aur uplabdh bank account options ki jaankari ke liye VSS MARKET se sampark karein. Account kholne ki eligibility aur zaroori documents ki jaankari bhi paayein."
+  }
+};
+
+function openService(id) {
+  const service = services[id];
+  if (!service) return;
+
+  document.getElementById("homePage").hidden = true;
+  document.getElementById("detailPage").hidden = false;
+  document.getElementById("serviceIcon").textContent = service.icon;
+  document.getElementById("serviceTitle").textContent = service.title;
+  document.getElementById("serviceDescription").textContent = service.description;
+
+  const message = "Hello VSS MARKET, mujhe " + service.title + " ke baare mein jaankari chahiye.";
+  document.getElementById("serviceWhatsApp").href =
+    "https://wa.me/918092923463?text=" + encodeURIComponent(message);
+
+  history.pushState({service:id}, "", "#service-" + id);
+  window.scrollTo(0,0);
+}
+
+function showHome() {
+  document.getElementById("detailPage").hidden = true;
+  document.getElementById("homePage").hidden = false;
+  window.scrollTo(0,0);
+}
+
+window.addEventListener("popstate", function() {
+  showHome();
+});
+</script>
 </body>
 </html>
