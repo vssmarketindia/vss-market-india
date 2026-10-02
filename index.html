@@ -2008,6 +2008,533 @@ document.getElementById("mobile").addEventListener(
 
     }
 );
+<script>
+const services = {
+  loan: {
+    icon: "💰",
+    title: "Loan Service",
+    description: "Loan related information aur enquiry assistance ke liye apni basic details submit karein."
+  },
+  pan: {
+    icon: "🪪",
+    title: "PAN Card ID Service",
+    description: "PAN card related service aur authorised assistance ke liye apni enquiry submit karein."
+  },
+  insurance: {
+    icon: "🏍️",
+    title: "Bike Insurance Service",
+    description: "Bike insurance related quotation aur service information ke liye enquiry submit karein."
+  },
+  credit: {
+    icon: "💳",
+    title: "Credit Card Service",
+    description: "Credit card options aur application information ke liye apni basic details submit karein."
+  },
+  aeps: {
+    icon: "🏧",
+    title: "AEPS ID Service",
+    description: "AEPS retailer ID related enquiry ke liye apni basic details submit karein."
+  },
+  account: {
+    icon: "🏦",
+    title: "Account Open Service",
+    description: "Account opening assistance ke liye apni basic details aur requirement submit karein."
+  }
+};
+
+let currentService = "loan";
+let loggedInUser = null;
+
+
+/* =========================
+   SERVICE SYSTEM
+========================= */
+
+function openService(id) {
+  if (!services[id]) return;
+
+  currentService = id;
+
+  const service = services[id];
+
+  document.getElementById("homePage").style.display = "none";
+  document.getElementById("servicePage").style.display = "block";
+
+  document.getElementById("selectedIcon").textContent = service.icon;
+  document.getElementById("selectedTitle").textContent = service.title;
+  document.getElementById("selectedDescription").textContent =
+    service.description;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+function openInquiry() {
+  openService("loan");
+}
+
+
+function showHome() {
+  document.getElementById("servicePage").style.display = "none";
+  document.getElementById("homePage").style.display = "block";
+
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, 10);
+}
+
+
+/* =========================
+   USER ACCOUNT SYSTEM
+========================= */
+
+function getUsers() {
+  try {
+    return JSON.parse(
+      localStorage.getItem("vss_market_users") || "{}"
+    );
+  } catch (e) {
+    return {};
+  }
+}
+
+
+function saveUsers(users) {
+  localStorage.setItem(
+    "vss_market_users",
+    JSON.stringify(users)
+  );
+}
+
+
+/* =========================
+   LOGIN / SIGNUP TABS
+========================= */
+
+function showAuth(type) {
+
+  const loginForm =
+    document.getElementById("loginForm");
+
+  const signupForm =
+    document.getElementById("signupForm");
+
+  const loginTab =
+    document.getElementById("loginTab");
+
+  const signupTab =
+    document.getElementById("signupTab");
+
+  const msg =
+    document.getElementById("authMsg");
+
+  msg.textContent = "";
+  msg.style.color = "";
+
+  if (type === "signup") {
+
+    loginForm.style.display = "none";
+    signupForm.style.display = "block";
+
+    loginTab.classList.remove("active");
+    signupTab.classList.add("active");
+
+  } else {
+
+    loginForm.style.display = "block";
+    signupForm.style.display = "none";
+
+    signupTab.classList.remove("active");
+    loginTab.classList.add("active");
+  }
+}
+
+
+/* =========================
+   SIGNUP
+========================= */
+
+function signupUser(e) {
+
+  e.preventDefault();
+
+  const name =
+    document.getElementById("signupName")
+      .value.trim();
+
+  const mobile =
+    document.getElementById("signupMobile")
+      .value.trim();
+
+  const userId =
+    document.getElementById("signupUserId")
+      .value.trim();
+
+  const password =
+    document.getElementById("signupPassword")
+      .value;
+
+
+  if (!/^[0-9]{10}$/.test(mobile)) {
+
+    showAuthMsg(
+      "Please valid 10 digit mobile number enter karein.",
+      "#d32f2f"
+    );
+
+    return;
+  }
+
+
+  if (!/^[A-Za-z0-9._-]{4,30}$/.test(userId)) {
+
+    showAuthMsg(
+      "User ID me 4-30 letters/numbers use karein.",
+      "#d32f2f"
+    );
+
+    return;
+  }
+
+
+  if (password.length < 6) {
+
+    showAuthMsg(
+      "Password minimum 6 characters ka hona chahiye.",
+      "#d32f2f"
+    );
+
+    return;
+  }
+
+
+  const users = getUsers();
+
+  const key = userId.toLowerCase();
+
+
+  if (users[key]) {
+
+    showAuthMsg(
+      "Ye User ID already registered hai. Login karein.",
+      "#d32f2f"
+    );
+
+    return;
+  }
+
+
+  users[key] = {
+    name: name,
+    mobile: mobile,
+    userId: userId,
+    password: password
+  };
+
+
+  saveUsers(users);
+
+
+  showAuthMsg(
+    "Account successfully create ho gaya. Ab login karein.",
+    "#0b8f4d"
+  );
+
+
+  document.getElementById("loginUserId").value =
+    userId;
+
+  document.getElementById("loginPassword").value =
+    "";
+
+
+  showAuth("login");
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+function loginUser(e) {
+
+  e.preventDefault();
+
+  const userId =
+    document.getElementById("loginUserId")
+      .value.trim();
+
+  const password =
+    document.getElementById("loginPassword")
+      .value;
+
+
+  const users = getUsers();
+
+  const user =
+    users[userId.toLowerCase()];
+
+
+  if (!user || user.password !== password) {
+
+    showAuthMsg(
+      "Invalid User ID ya Password.",
+      "#d32f2f"
+    );
+
+    return;
+  }
+
+
+  loggedInUser = user;
+
+
+  sessionStorage.setItem(
+    "vss_market_logged_user",
+    JSON.stringify(user)
+  );
+
+
+  unlockWebsite();
+}
+
+
+/* =========================
+   UNLOCK WEBSITE
+========================= */
+
+function unlockWebsite() {
+
+  const gate =
+    document.getElementById("accountGate");
+
+  const bar =
+    document.getElementById("userBar");
+
+  const name =
+    document.getElementById("loggedUserName");
+
+  const id =
+    document.getElementById("loggedUserId");
+
+
+  gate.style.display = "none";
+
+  bar.style.display = "flex";
+
+
+  name.textContent =
+    loggedInUser.name;
+
+  id.textContent =
+    loggedInUser.userId;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+function logoutUser() {
+
+  sessionStorage.removeItem(
+    "vss_market_logged_user"
+  );
+
+  loggedInUser = null;
+
+
+  document.getElementById("userBar")
+    .style.display = "none";
+
+
+  document.getElementById("accountGate")
+    .style.display = "flex";
+
+
+  showAuth("login");
+
+
+  document.getElementById("loginPassword")
+    .value = "";
+}
+
+
+/* =========================
+   LOGIN MESSAGE
+========================= */
+
+function showAuthMsg(message, color) {
+
+  const msg =
+    document.getElementById("authMsg");
+
+  msg.textContent = message;
+
+  msg.style.color = color;
+}
+
+
+/* =========================
+   CHECK LOGIN
+========================= */
+
+function requireLogin() {
+
+  if (!loggedInUser) {
+
+    document.getElementById("accountGate")
+      .style.display = "flex";
+
+    return false;
+  }
+
+  return true;
+}
+
+
+/* =========================
+   WHATSAPP INQUIRY
+========================= */
+
+function sendWhatsApp() {
+
+  if (!requireLogin()) return;
+
+
+  const name =
+    document.getElementById("name")
+      .value.trim();
+
+  const mobile =
+    document.getElementById("mobile")
+      .value.trim();
+
+  const city =
+    document.getElementById("city")
+      .value.trim();
+
+  const shop =
+    document.getElementById("shop")
+      .value.trim();
+
+  const messageText =
+    document.getElementById("message")
+      .value.trim();
+
+
+  if (!name) {
+
+    alert("Please apna naam enter karein.");
+
+    return;
+  }
+
+
+  if (!/^[0-9]{10}$/.test(mobile)) {
+
+    alert(
+      "Please valid 10 digit mobile number enter karein."
+    );
+
+    return;
+  }
+
+
+  const service =
+    services[currentService].title;
+
+
+  const whatsappMessage = `
+🔔 VSS MARKET INDIA
+━━━━━━━━━━━━━━━━━━━━
+
+📌 Service:
+${service}
+
+👤 Website User:
+${loggedInUser.name}
+
+🆔 User ID:
+${loggedInUser.userId}
+
+📞 Registered Mobile:
+${loggedInUser.mobile}
+
+👤 Inquiry Name:
+${name}
+
+📱 Inquiry Mobile:
+${mobile}
+
+🏙️ City / District:
+${city || "Not Provided"}
+
+🏪 Shop / Business:
+${shop || "Not Provided"}
+
+📝 Requirement:
+${messageText || "Not Provided"}
+
+━━━━━━━━━━━━━━━━━━━━
+
+VSS MARKET INDIA
+
+👨‍💼 Founder & Director:
+VIKASH KUMAR SHARMA
+
+📞 +91 80929 23463
+`;
+
+
+  const url =
+    "https://wa.me/918092923463?text=" +
+    encodeURIComponent(whatsappMessage);
+
+
+  window.open(url, "_blank");
+}
+
+
+/* =========================
+   PAGE LOAD
+========================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+    try {
+
+      const saved =
+        sessionStorage.getItem(
+          "vss_market_logged_user"
+        );
+
+
+      if (saved) {
+
+        loggedInUser =
+          JSON.parse(saved);
+
+        unlockWebsite();
+      }
+
+    } catch (e) {
+
+      console.log(
+        "Login session not found."
+      );
+    }
+
+  }
+);
 
 </script>
 
