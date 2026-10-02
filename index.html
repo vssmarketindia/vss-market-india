@@ -4,196 +4,250 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VSS MARKET | Digital Services & Online Store</title>
+<title>VSS MARKET INDIA | Digital Services</title>
+
+<meta name="description"
+content="VSS MARKET INDIA - Digital Services, Recharge, AEPS, QR & Online Business Services">
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f4f8ff;
-  color:#14284b;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f8ff;
+  color:#14213d;
+  line-height:1.5;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family:inherit;
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
-header{
-  background:white;
-  padding:18px 15px;
-  text-align:center;
-  border-bottom:1px solid #e3e9f5;
-}
-
-.logo{
+.top-header{
+  background:#fff;
+  padding:18px 5%;
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:1px solid #e7ecf5;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
   gap:12px;
 }
 
-.logo-mark{
-  width:65px;
-  height:65px;
+.brand-logo{
+  width:58px;
+  height:58px;
   border-radius:50%;
-  background:linear-gradient(135deg,#ffb900,#ff7a00);
-  position:relative;
+  background:linear-gradient(135deg,#ffbf00,#ff7600);
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 4px 12px #ff9d0030;
+  box-shadow:0 5px 18px rgba(255,150,0,.25);
+  position:relative;
 }
 
-.logo-mark:before{
+.brand-logo:after{
   content:"";
-  width:42px;
-  height:42px;
-  border:7px solid white;
+  width:38px;
+  height:38px;
+  border:7px solid #fff;
   border-right-color:transparent;
   border-radius:50%;
   transform:rotate(-35deg);
 }
 
-.logo-text{
-  text-align:left;
-}
-
-.logo-text h1{
-  color:#0754b8;
-  font-size:34px;
-  letter-spacing:1px;
+.brand-name{
   line-height:1;
 }
 
-.logo-text h1 span{
+.brand-name h1{
+  color:#0756b7;
+  font-size:31px;
+  letter-spacing:1px;
+  font-weight:900;
+}
+
+.brand-name h1 span{
   color:#101d50;
 }
 
-.logo-text p{
-  margin-top:5px;
+.brand-name p{
+  margin-top:6px;
+  color:#5d6b82;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:.5px;
+}
+
+.header-tagline{
+  color:#0756b7;
+  font-weight:bold;
   font-size:14px;
-  color:#0754b8;
-  font-weight:bold;
-}
-
-.tagline{
-  margin-top:12px;
-  color:#0754b8;
-  font-size:17px;
-  font-weight:bold;
 }
 
 
-/* =========================
-   NAV
-========================= */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
-nav{
-  background:#063d96;
-  padding:12px 8px;
+.navbar{
+  background:linear-gradient(90deg,#062f78,#075bc3);
+  padding:9px 5%;
   display:flex;
   justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  box-shadow:0 3px 12px #00133320;
+  align-items:center;
+  gap:6px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-nav a{
+.navbar a{
+  color:#fff;
   text-decoration:none;
-  color:white;
   font-weight:bold;
-  padding:10px 22px;
+  padding:10px 20px;
   border-radius:25px;
+  transition:.2s;
 }
 
-nav a:hover{
-  background:#167ce8;
+.navbar a:hover{
+  background:rgba(255,255,255,.16);
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
-  margin:20px auto;
-  max-width:1100px;
-  min-height:330px;
-  padding:45px 25px;
+  max-width:1150px;
+  margin:25px auto;
+  min-height:400px;
+  padding:55px 6%;
+  border-radius:24px;
+
+  background:
+    radial-gradient(circle at 85% 45%,rgba(46,184,255,.35),transparent 30%),
+    linear-gradient(120deg,#e3f5ff,#fff,#c9ecff);
+
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
-  background:
-  radial-gradient(circle at 80% 40%,#5ecbff55,transparent 35%),
-  linear-gradient(120deg,#dff5ff,#ffffff,#bfeaff);
-  border-radius:18px;
+  gap:40px;
   overflow:hidden;
+  position:relative;
 }
 
-.hero-left{
+.hero-content{
   flex:1;
-  text-align:left;
 }
 
-.hero-left .big-logo{
-  font-size:65px;
+.hero-label{
+  display:inline-block;
+  background:#e7f2ff;
+  color:#0756b7;
+  padding:8px 16px;
+  border-radius:25px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:16px;
+}
+
+.hero-logo{
+  font-size:64px;
+  line-height:1;
   font-weight:900;
-  color:#0754b8;
   letter-spacing:2px;
+  color:#0756b7;
 }
 
-.hero-left .big-logo span{
+.hero-logo span{
   color:#101d50;
 }
 
 .hero h2{
-  font-size:27px;
-  color:#123b83;
-  margin:10px 0;
+  color:#143b80;
+  font-size:30px;
+  margin:16px 0 10px;
 }
 
 .hero p{
-  line-height:1.7;
-  font-size:17px;
+  max-width:600px;
+  color:#53627a;
+  font-size:16px;
+  line-height:1.8;
 }
 
-.hero-badge{
-  display:inline-block;
-  margin-top:18px;
-  background:#0754b8;
-  color:white;
-  padding:10px 24px;
-  border-radius:25px;
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:22px;
+}
+
+.primary-btn{
+  background:#0756b7;
+  color:#fff;
+  padding:13px 24px;
+  border-radius:9px;
+  text-decoration:none;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+}
+
+.whatsapp-btn-small{
+  background:#16c76a;
+  color:#fff;
+  padding:13px 24px;
+  border-radius:9px;
+  text-decoration:none;
   font-weight:bold;
 }
 
-.phone{
-  width:230px;
-  height:300px;
-  background:#10285b;
-  border:7px solid #10285b;
+.hero-phone{
+  width:220px;
+  height:320px;
+  flex-shrink:0;
+  background:#0c2453;
+  padding:9px;
   border-radius:30px;
-  padding:10px;
-  box-shadow:0 12px 30px #00133340;
+  box-shadow:0 18px 40px rgba(0,31,90,.28);
   transform:rotate(-3deg);
 }
 
-.phone-screen{
+.hero-phone-screen{
   height:100%;
-  border-radius:20px;
-  background:white;
+  background:#fff;
+  border-radius:22px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -201,241 +255,322 @@ nav a:hover{
   gap:15px;
 }
 
-.phone-screen h3{
-  color:#0754b8;
+.hero-phone-screen h3{
+  color:#0756b7;
   font-size:22px;
 }
 
-.qr{
-  width:105px;
-  height:105px;
-  background:
-  linear-gradient(90deg,#111 10%,transparent 10% 20%,#111 20% 30%,transparent 30% 40%,#111 40% 50%,transparent 50% 60%,#111 60% 70%,transparent 70% 80%,#111 80%);
+.qr-box{
+  width:110px;
+  height:110px;
   border:7px solid #111;
+  background:
+  linear-gradient(90deg,
+  #111 8%,transparent 8% 18%,
+  #111 18% 28%,transparent 28% 38%,
+  #111 38% 48%,transparent 48% 58%,
+  #111 58% 68%,transparent 68% 78%,
+  #111 78%);
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* =====================================================
+   TRUST BAR
+===================================================== */
 
-.btn{
-  display:inline-block;
-  background:#16c76a;
-  color:white;
-  padding:13px 23px;
-  margin-top:20px;
-  border:0;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  cursor:pointer;
-}
+.trust-bar{
+  max-width:1150px;
+  margin:0 auto 25px;
+  background:#fff;
+  border-radius:15px;
+  padding:15px 20px;
+  box-shadow:0 4px 18px rgba(0,30,80,.08);
 
-
-/* =========================
-   PARTNER STRIP
-========================= */
-
-.partner-strip{
-  max-width:1100px;
-  margin:20px auto;
-  background:white;
-  border-radius:14px;
-  padding:18px;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:25px;
   flex-wrap:wrap;
-  box-shadow:0 4px 15px #00133312;
+  gap:22px;
 }
 
-.partner-title{
-  background:#063d96;
-  color:white;
-  padding:13px 22px;
-  border-radius:0 30px 30px 0;
-  font-weight:bold;
+.trust-title{
+  color:#0756b7;
+  font-weight:900;
+  font-size:15px;
 }
 
-.partner-logo{
+.platform{
   display:flex;
   align-items:center;
   gap:8px;
   font-weight:bold;
-  font-size:20px;
-  white-space:nowrap;
+  color:#34445e;
 }
 
-.partner-icon{
-  width:42px;
-  height:42px;
-  border-radius:50%;
+.platform-icon{
+  width:38px;
+  height:38px;
+  border-radius:10px;
   display:flex;
   align-items:center;
   justify-content:center;
+  color:#fff;
   font-weight:900;
-  color:white;
 }
 
-.bharat-icon{
-  background:#16a8c7;
+.bharat{
+  background:#12a8c5;
 }
 
-.gpay-icon{
+.google{
   background:#4285f4;
 }
 
-.eg-icon{
-  background:#0879c9;
-  border-radius:8px;
+.eg{
+  background:#087bc8;
 }
 
-.mos-icon{
-  background:#e77817;
+.mos{
+  background:#e77b16;
 }
 
 
-/* =========================
-   SECTION
-========================= */
+/* =====================================================
+   COMMON SECTION
+===================================================== */
 
 section{
-  padding:22px 16px;
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
+  padding:45px 20px;
 }
 
-.title{
+.section-heading{
   text-align:center;
-  margin-bottom:25px;
-  color:#153c87;
-  font-size:30px;
+  margin-bottom:30px;
+}
+
+.section-heading span{
+  color:#0756b7;
+  font-size:13px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.section-heading h2{
+  color:#143b80;
+  font-size:32px;
+  margin-top:6px;
+}
+
+.section-heading p{
+  color:#667085;
+  margin-top:7px;
 }
 
 
-/* =========================
+/* =====================================================
    SERVICES
-========================= */
+===================================================== */
 
-.grid{
+.services-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  grid-template-columns:repeat(5,1fr);
   gap:18px;
 }
 
-.item{
-  background:white;
-  padding:24px 14px;
+.service-card{
+  background:#fff;
+  border:1px solid #e6ebf3;
+  border-radius:17px;
+  padding:25px 15px;
   text-align:center;
-  border-radius:14px;
-  box-shadow:0 3px 14px #00133312;
-}
-
-.service{
-  border:0;
-  width:100%;
-  font-family:inherit;
-  color:inherit;
   cursor:pointer;
-  transition:.2s;
+  transition:.25s;
+  box-shadow:0 4px 15px rgba(0,30,80,.06);
 }
 
-.service:hover{
-  transform:translateY(-5px);
-  box-shadow:0 8px 22px #00133325;
+.service-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 12px 28px rgba(0,30,80,.12);
+  border-color:#b8d6ff;
 }
 
-.emoji{
-  font-size:45px;
-  margin-bottom:12px;
+.service-icon{
+  width:68px;
+  height:68px;
+  margin:0 auto 15px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  background:#edf5ff;
 }
 
-.item h3{
+.service-card h3{
+  color:#143b80;
   font-size:17px;
   margin-bottom:8px;
 }
 
-.item p{
+.service-card p{
+  color:#69778e;
   font-size:13px;
-  color:#667085;
-  line-height:1.5;
+  min-height:40px;
+}
+
+.apply-btn{
+  display:inline-block;
+  margin-top:17px;
+  background:#0756b7;
+  color:#fff;
+  padding:9px 17px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:bold;
 }
 
 
-/* =========================
-   SERVICE DETAIL
-========================= */
+/* =====================================================
+   ABOUT
+===================================================== */
 
-.detail{
-  background:white;
-  padding:28px 20px;
-  border-radius:15px;
-  box-shadow:0 3px 14px #00133312;
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.about-box,
+.contact-box{
+  background:#fff;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 5px 20px rgba(0,30,80,.07);
+}
+
+.about-box h3,
+.contact-box h3{
+  color:#143b80;
+  font-size:23px;
+  margin-bottom:12px;
+}
+
+.about-box p,
+.contact-box p{
+  color:#637188;
+  line-height:1.8;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:22px;
+}
+
+.feature{
+  background:#f4f8ff;
+  border-radius:10px;
+  padding:13px;
+  color:#143b80;
+  font-weight:bold;
+  font-size:13px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-box{
+  background:linear-gradient(135deg,#eaf6ff,#f8fbff);
   text-align:center;
 }
 
-.detail .emoji{
-  font-size:58px;
+.contact-number{
+  font-size:22px;
+  color:#0756b7;
+  font-weight:900;
+  margin-top:15px;
 }
 
-.detail p{
-  color:#566176;
+
+/* =====================================================
+   SERVICE DETAIL
+===================================================== */
+
+#detailPage section{
+  max-width:900px;
+}
+
+.detail-box{
+  background:#fff;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 6px 25px rgba(0,30,80,.08);
+}
+
+.detail-icon{
+  width:80px;
+  height:80px;
+  border-radius:22px;
+  background:#edf5ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:42px;
+  margin:0 auto 15px;
+}
+
+.detail-title{
+  text-align:center;
+  color:#143b80;
+  font-size:30px;
+}
+
+.detail-description{
+  text-align:center;
+  color:#667085;
+  margin:10px auto 25px;
+  max-width:650px;
   line-height:1.8;
-  margin-top:12px;
 }
-
-.back{
-  display:inline-block;
-  padding:11px 18px;
-  border:1px solid #164ca5;
-  border-radius:8px;
-  color:#164ca5;
-  background:white;
-  font-weight:bold;
-  cursor:pointer;
-  margin:8px;
-}
-
-
-/* =========================
-   FORM
-========================= */
 
 .form-box{
-  margin-top:25px;
-  text-align:left;
-  background:#f8faff;
-  padding:20px;
-  border-radius:12px;
+  background:#f6f9ff;
+  padding:22px;
+  border-radius:15px;
 }
 
 .form-group{
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 
 .form-group label{
   display:block;
   font-weight:bold;
+  color:#263854;
   margin-bottom:7px;
+  font-size:14px;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select{
   width:100%;
+  border:1px solid #d3dce9;
+  background:#fff;
+  border-radius:9px;
   padding:13px;
-  border:1px solid #ccd5e5;
-  border-radius:8px;
-  font-size:15px;
-  font-family:Arial,sans-serif;
   outline:none;
-  background:white;
+  font-size:15px;
 }
 
 .form-group textarea{
-  min-height:100px;
+  min-height:95px;
   resize:vertical;
 }
 
@@ -443,185 +578,257 @@ section{
 .form-group textarea:focus,
 .form-group select:focus{
   border-color:#1688ee;
+  box-shadow:0 0 0 3px rgba(22,136,238,.1);
 }
 
 .required{
   color:red;
 }
 
-.whatsapp-btn{
+.submit-whatsapp{
   width:100%;
-  background:#16c76a;
-  color:white;
-  padding:15px;
   border:0;
-  border-radius:8px;
+  background:#16c76a;
+  color:#fff;
+  padding:15px;
+  border-radius:9px;
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
 }
 
-.small-note{
+.submit-whatsapp:hover{
+  background:#0eae59;
+}
+
+.form-note{
   text-align:center;
-  color:#667085;
+  color:#7a879b;
   font-size:12px;
-  margin-top:12px;
+  margin-top:10px;
+}
+
+.back-btn{
+  border:1px solid #0756b7;
+  background:#fff;
+  color:#0756b7;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-bottom:15px;
 }
 
 
-/* =========================
-   ABOUT + CONTACT
-========================= */
+/* =====================================================
+   PLATFORMS
+===================================================== */
 
-.about-contact{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.about-box,
-.contact{
-  background:white;
-  padding:28px;
-  border-radius:15px;
-  box-shadow:0 3px 14px #00133312;
-}
-
-.about-box p,
-.contact p{
-  line-height:1.8;
-  color:#566176;
-}
-
-.contact{
-  background:#e7f3ff;
-  text-align:center;
-}
-
-
-/* =========================
-   PARTNER COMPANIES
-========================= */
-
-.partners-section{
-  background:#06285f;
+.platform-section{
   max-width:none;
-  color:white;
-  padding:30px 15px;
+  background:#06285f;
+  color:#fff;
 }
 
-.partners-inner{
-  max-width:1100px;
+.platform-inner{
+  max-width:1150px;
   margin:auto;
 }
 
-.partners-title{
-  text-align:center;
-  font-size:25px;
-  margin-bottom:25px;
+.platform-section .section-heading span{
+  color:#7dc5ff;
 }
 
-.partners-grid{
+.platform-section .section-heading h2{
+  color:#fff;
+}
+
+.platform-section .section-heading p{
+  color:#c9dcf5;
+}
+
+.platform-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:18px;
 }
 
-.partner-card{
+.platform-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:15px;
+  padding:25px 15px;
   text-align:center;
-  padding:20px 10px;
-  border-right:1px solid #ffffff40;
 }
 
-.partner-card:last-child{
-  border-right:0;
+.platform-card .platform-icon{
+  margin:0 auto 12px;
+  width:52px;
+  height:52px;
+  font-size:17px;
 }
 
-.partner-card .partner-icon{
-  margin:0 auto 10px;
-}
-
-.partner-card h3{
+.platform-card h3{
   font-size:18px;
 }
 
-.partner-card p{
+.platform-card p{
+  color:#d2e1f5;
   font-size:12px;
   margin-top:5px;
-  color:#dbe9ff;
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
-  background:#031d48;
-  color:white;
-  padding:25px 15px;
+  background:#031b42;
+  color:#fff;
   text-align:center;
-  line-height:1.8;
-  font-size:14px;
+  padding:28px 15px;
 }
 
-footer h3{
-  font-size:20px;
+footer h2{
+  font-size:22px;
+}
+
+footer p{
+  color:#b9cbe5;
+  font-size:13px;
+  margin-top:5px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:950px){
+
+  .services-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
 
 @media(max-width:700px){
 
-  .logo-text h1{
-    font-size:28px;
+  .top-header{
+    justify-content:center;
+    flex-direction:column;
+  }
+
+  .header-tagline{
+    display:none;
+  }
+
+  .navbar{
+    position:relative;
+  }
+
+  .navbar a{
+    padding:9px 12px;
+    font-size:13px;
   }
 
   .hero{
+    margin:15px;
+    padding:35px 20px;
     flex-direction:column;
     text-align:center;
-    padding:35px 18px;
   }
 
-  .hero-left{
-    text-align:center;
-  }
-
-  .hero-left .big-logo{
+  .hero-logo{
     font-size:48px;
   }
 
-  .phone{
-    width:190px;
-    height:250px;
+  .hero h2{
+    font-size:24px;
   }
 
-  .about-contact{
-    grid-template-columns:1fr;
+  .hero p{
+    font-size:14px;
   }
 
-  .partners-grid{
+  .hero-content{
+    width:100%;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-phone{
+    width:185px;
+    height:270px;
+  }
+
+  .trust-bar{
+    margin:15px;
+  }
+
+  section{
+    padding:35px 15px;
+  }
+
+  .services-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .partner-card{
-    border-right:0;
-    border-bottom:1px solid #ffffff30;
+  .about-grid{
+    grid-template-columns:1fr;
   }
 
-  .partner-strip{
-    gap:15px;
+  .platform-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  .partner-title{
-    width:100%;
-    text-align:center;
-    border-radius:25px;
+  .detail-box{
+    padding:20px 15px;
   }
+
 }
+
+@media(max-width:430px){
+
+  .brand-name h1{
+    font-size:27px;
+  }
+
+  .brand-logo{
+    width:50px;
+    height:50px;
+  }
+
+  .brand-logo:after{
+    width:32px;
+    height:32px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .platform-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .hero-logo{
+    font-size:42px;
+  }
+
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
 
 [hidden]{
   display:none!important;
@@ -634,50 +841,50 @@ footer h3{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
-<header>
+<header class="top-header">
 
-<div class="logo">
+<div class="brand">
 
-  <div class="logo-mark"></div>
+  <div class="brand-logo"></div>
 
-  <div class="logo-text">
-    <h1>VSS <span>MARKET</span></h1>
-    <p>Digital Services & Online Store</p>
+  <div class="brand-name">
+    <h1>VSS <span>MARKET INDIA</span></h1>
+    <p>DIGITAL SERVICES & ONLINE STORE</p>
   </div>
 
 </div>
 
-<div class="tagline">
-  Apne Bharose Ka Digital Saathi
+<div class="header-tagline">
+  आपका भरोसेमंद डिजिटल साथी
 </div>
 
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
-<nav>
+<nav class="navbar">
 
-<a href="#home" onclick="showHome()">🏠 Home</a>
+<a href="#home" onclick="showHome()">Home</a>
 
-<a href="#services" onclick="showHome()">▦ Services</a>
+<a href="#services" onclick="showHome()">Services</a>
 
-<a href="#about" onclick="showHome()">👥 About</a>
+<a href="#about" onclick="showHome()">About</a>
 
-<a href="#contact" onclick="showHome()">✉ Contact</a>
+<a href="#contact" onclick="showHome()">Contact</a>
 
 </nav>
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
 
 <main id="homePage">
 
@@ -686,9 +893,13 @@ footer h3{
 
 <div class="hero" id="home">
 
-<div class="hero-left">
+<div class="hero-content">
 
-<div class="big-logo">
+<div class="hero-label">
+VSS MARKET INDIA
+</div>
+
+<div class="hero-logo">
 VSS <span>MARKET</span>
 </div>
 
@@ -698,26 +909,46 @@ Ab Ek Hi Jagah
 </h2>
 
 <p>
-Digital India ki har zarurat ke liye
-VSS MARKET ke saath judiye.
+Recharge, AEPS, QR aur digital business
+services ki jaankari aur assistance
+aasani se paayein.
 </p>
 
-<div class="hero-badge">
-Fast • Secure • Trusted
-</div>
+<div class="hero-buttons">
+
+<a href="#services" class="primary-btn">
+Explore Services
+</a>
+
+<a
+href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET%20INDIA"
+target="_blank"
+class="whatsapp-btn-small">
+
+WhatsApp Us
+
+</a>
 
 </div>
 
+</div>
 
-<div class="phone">
 
-<div class="phone-screen">
+<div class="hero-phone">
+
+<div class="hero-phone-screen">
 
 <h3>VSS MARKET</h3>
 
-<div class="qr"></div>
+<div class="qr-box"></div>
 
-<strong>Digital Services</strong>
+<strong>
+Digital Services
+</strong>
+
+<small>
+Fast • Secure • Simple
+</small>
 
 </div>
 
@@ -726,20 +957,20 @@ Fast • Secure • Trusted
 </div>
 
 
-<!-- =========================
-     PARTNER STRIP
-========================= -->
+<!-- =====================================================
+     TRUSTED PLATFORMS
+===================================================== -->
 
-<div class="partner-strip">
+<div class="trust-bar">
 
-<div class="partner-title">
-Our Trusted Partners
+<div class="trust-title">
+Service Platforms
 </div>
 
 
-<div class="partner-logo">
+<div class="platform">
 
-<div class="partner-icon bharat-icon">
+<div class="platform-icon bharat">
 B
 </div>
 
@@ -748,9 +979,9 @@ BharatPe
 </div>
 
 
-<div class="partner-logo">
+<div class="platform">
 
-<div class="partner-icon gpay-icon">
+<div class="platform-icon google">
 G
 </div>
 
@@ -759,9 +990,9 @@ Google Pay
 </div>
 
 
-<div class="partner-logo">
+<div class="platform">
 
-<div class="partner-icon eg-icon">
+<div class="platform-icon eg">
 EG
 </div>
 
@@ -770,9 +1001,9 @@ EG Recharge
 </div>
 
 
-<div class="partner-logo">
+<div class="platform">
 
-<div class="partner-icon mos-icon">
+<div class="platform-icon mos">
 M
 </div>
 
@@ -783,238 +1014,215 @@ MOS Utility
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+===================================================== -->
 
 <section id="services">
 
-<h2 class="title">
-Our Services
-</h2>
+<div class="section-heading">
 
-<div class="grid">
+<span>What We Offer</span>
+
+<h2>Our Digital Services</h2>
+
+<p>
+Apni zarurat ki service select karein
+aur details submit karein.
+</p>
+
+</div>
 
 
-<button class="item service"
+<div class="services-grid">
+
+
+<button
+class="service-card"
 onclick="openService('aeps')">
 
-<div class="emoji">💳</div>
+<div class="service-icon">
+💳
+</div>
 
 <h3>AEPS ID Service</h3>
 
 <p>
 AEPS Retailer ID ke liye
-apply karein.
+application karein.
 </p>
+
+<span class="apply-btn">
+Apply Now →
+</span>
 
 </button>
 
 
-<button class="item service"
+<button
+class="service-card"
 onclick="openService('recharge')">
 
-<div class="emoji">📱</div>
+<div class="service-icon">
+📱
+</div>
 
 <h3>Recharge ID</h3>
 
 <p>
 Mobile & DTH recharge
-business ke liye apply karein.
+business ke liye.
 </p>
+
+<span class="apply-btn">
+Apply Now →
+</span>
 
 </button>
 
 
-<button class="item service"
+<button
+class="service-card"
 onclick="openService('bharatpe')">
 
-<div class="emoji">🟢</div>
+<div class="service-icon">
+🟢
+</div>
 
 <h3>BharatPe QR</h3>
 
 <p>
-Merchant QR service ke liye
-details bharein.
+Merchant QR service
+ke liye enquiry karein.
 </p>
+
+<span class="apply-btn">
+Apply Now →
+</span>
 
 </button>
 
 
-<button class="item service"
+<button
+class="service-card"
 onclick="openService('gpay')">
 
-<div class="emoji">📲</div>
+<div class="service-icon">
+📲
+</div>
 
-<h3>Google Pay QR Code</h3>
+<h3>Google Pay QR</h3>
 
 <p>
 Business QR ke liye
-apply karein.
+enquiry karein.
 </p>
+
+<span class="apply-btn">
+Apply Now →
+</span>
 
 </button>
 
 
-<button class="item service"
+<button
+class="service-card"
 onclick="openService('account')">
 
-<div class="emoji">🏦</div>
+<div class="service-icon">
+🏦
+</div>
 
-<h3>Account Open Service</h3>
+<h3>Account Open</h3>
 
 <p>
 Account opening assistance
-ke liye apply karein.
+ke liye enquiry karein.
 </p>
 
+<span class="apply-btn">
+Apply Now →
+</span>
+
 </button>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT + CONTACT
-========================= -->
+===================================================== -->
 
 <section id="about">
 
-<div class="about-contact">
+<div class="about-grid">
 
 
 <div class="about-box">
 
-<h2 class="title">
-About VSS MARKET
-</h2>
+<h3>
+About VSS MARKET INDIA
+</h3>
 
 <p>
-VSS MARKET mein aapka swagat hai.
-Hamara uddeshya digital services ki
-jaankari aur assistance ek hi platform
-par uplabdh karana hai.
+VSS MARKET INDIA par digital services
+aur online business solutions ki
+jaankari ek hi platform par available
+karane ka prayas kiya jata hai.
 </p>
 
-<br>
+<div class="features">
 
-<p>
-Hum digital business aur online services
-ko customers ke liye simple aur convenient
-banane ka prayas karte hain.
-</p>
+<div class="feature">
+✓ Simple Process
+</div>
+
+<div class="feature">
+✓ Quick Assistance
+</div>
+
+<div class="feature">
+✓ Digital Services
+</div>
+
+<div class="feature">
+✓ WhatsApp Support
+</div>
+
+</div>
 
 </div>
 
 
-<div class="contact" id="contact">
+<div class="contact-box" id="contact">
 
-<h2 class="title">
+<h3>
 Contact Us
-</h2>
+</h3>
 
 <p>
-Jankari aur service ke liye
-WhatsApp karein.
+Kisi bhi service ki jaankari ke liye
+humse WhatsApp par contact karein.
 </p>
 
-<a class="btn"
-href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET"
+<div class="contact-number">
++91 80929 23463
+</div>
+
+<a
+class="whatsapp-btn-small"
+href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET%20INDIA%2C%20mujhe%20service%20ke%20baare%20mein%20jaankari%20chahiye."
 target="_blank">
 
-🟢 WhatsApp Now
+WhatsApp Now
 
 </a>
 
-<p style="margin-top:15px;font-weight:bold;">
-+91 80929 23463
-</p>
-
 </div>
 
-</div>
-
-</section>
-
-
-<!-- =========================
-     PARTNER COMPANIES
-========================= -->
-
-<section class="partners-section">
-
-<div class="partners-inner">
-
-<h2 class="partners-title">
-Our Partner Companies
-</h2>
-
-
-<div class="partners-grid">
-
-
-<div class="partner-card">
-
-<div class="partner-icon bharat-icon">
-B
-</div>
-
-<h3>BharatPe</h3>
-
-<p>
-Merchant Payment Services
-</p>
-
-</div>
-
-
-<div class="partner-card">
-
-<div class="partner-icon gpay-icon">
-G
-</div>
-
-<h3>Google Pay</h3>
-
-<p>
-Digital Payment Services
-</p>
-
-</div>
-
-
-<div class="partner-card">
-
-<div class="partner-icon eg-icon">
-EG
-</div>
-
-<h3>EG Recharge</h3>
-
-<p>
-Recharge Services
-</p>
-
-</div>
-
-
-<div class="partner-card">
-
-<div class="partner-icon mos-icon">
-M
-</div>
-
-<h3>MOS Utility</h3>
-
-<p>
-Digital Utility Services
-</p>
-
-</div>
-
-
-</div>
 
 </div>
 
@@ -1024,38 +1232,42 @@ Digital Utility Services
 </main>
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICE DETAIL PAGE
-========================= -->
+===================================================== -->
 
 <main id="detailPage" hidden>
 
 <section>
 
-<button class="back"
+<button
+class="back-btn"
 onclick="showHome()">
+
 ← Back to Services
+
 </button>
 
 
-<div class="detail">
+<div class="detail-box">
 
-
-<div class="emoji"
+<div
+class="detail-icon"
 id="serviceIcon">
 </div>
 
 
-<h2 class="title"
+<h2
+class="detail-title"
 id="serviceTitle">
 </h2>
 
 
-<p id="serviceDescription">
+<p
+class="detail-description"
+id="serviceDescription">
 </p>
 
-
-<!-- FORM -->
 
 <div class="form-box">
 
@@ -1069,8 +1281,7 @@ Full Name <span class="required">*</span>
 <input
 type="text"
 id="customerName"
-placeholder="Apna naam likhein"
-required>
+placeholder="Apna naam likhein">
 
 </div>
 
@@ -1086,8 +1297,7 @@ type="tel"
 id="customerMobile"
 placeholder="10 digit mobile number"
 maxlength="10"
-inputmode="numeric"
-required>
+inputmode="numeric">
 
 </div>
 
@@ -1149,7 +1359,7 @@ placeholder="Apni requirement likhein">
 
 
 <button
-class="whatsapp-btn"
+class="submit-whatsapp"
 onclick="sendToWhatsApp()">
 
 🟢 Submit Details on WhatsApp
@@ -1157,9 +1367,9 @@ onclick="sendToWhatsApp()">
 </button>
 
 
-<p class="small-note">
-Aapki details WhatsApp ke through
-VSS MARKET ko bheji jayengi.
+<p class="form-note">
+Submit karne par aapki details WhatsApp ke
+through VSS MARKET INDIA ko bheji jayengi.
 </p>
 
 </div>
@@ -1168,7 +1378,8 @@ VSS MARKET ko bheji jayengi.
 <br>
 
 
-<button class="back"
+<button
+class="back-btn"
 onclick="showHome()">
 
 ← All Services
@@ -1182,315 +1393,47 @@ onclick="showHome()">
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- =====================================================
+     SERVICE PLATFORMS
+===================================================== -->
 
-<footer>
+<section class="platform-section">
 
-<h3>
-VSS MARKET
-</h3>
+<div class="platform-inner">
+
+<div class="section-heading">
+
+<span>
+Digital Ecosystem
+</span>
+
+<h2>
+Our Service Platforms
+</h2>
 
 <p>
-Digital Services & Online Store
+Available digital service platforms
 </p>
+
+</div>
+
+
+<div class="platform-grid">
+
+
+<div class="platform-card">
+
+<div class="platform-icon bharat">
+B
+</div>
+
+<h3>BharatPe</h3>
 
 <p>
-© 2026 VSS MARKET. All Rights Reserved.
+Merchant Payment Services
 </p>
 
-<p>
-Digital India • Digital Future
-</p>
+</div>
 
-</footer>
 
-
-
-<script>
-
-
-/* =========================
-   SERVICE DATA
-========================= */
-
-const services = {
-
-
-aeps:{
-
-icon:"💳",
-
-title:"AEPS ID Service",
-
-description:
-"AEPS Retailer ID ke liye neeche apni basic details fill karein. Details submit karne ke baad WhatsApp par application bhej sakte hain.",
-
-extraLabel:
-"AEPS Service Requirement",
-
-extraPlaceholder:
-"Apni AEPS related requirement likhein."
-
-},
-
-
-recharge:{
-
-icon:"📱",
-
-title:"Recharge ID",
-
-description:
-"Mobile & DTH recharge business ke liye Recharge ID ki jaankari aur application ke liye neeche details fill karein.",
-
-extraLabel:
-"Recharge Service Requirement",
-
-extraPlaceholder:
-"Mobile, DTH ya recharge business se related requirement likhein."
-
-},
-
-
-bharatpe:{
-
-icon:"🟢",
-
-title:"BharatPe QR",
-
-description:
-"Business ke liye merchant QR service ki jaankari ke liye neeche apni details fill karein.",
-
-extraLabel:
-"Merchant QR Requirement",
-
-extraPlaceholder:
-"Shop/business aur QR se related requirement likhein."
-
-},
-
-
-gpay:{
-
-icon:"📲",
-
-title:"Google Pay QR Code",
-
-description:
-"Business QR Code ki jaankari aur assistance ke liye neeche apni details fill karein.",
-
-extraLabel:
-"Google Pay QR Requirement",
-
-extraPlaceholder:
-"Google Pay QR se related requirement likhein."
-
-},
-
-
-account:{
-
-icon:"🏦",
-
-title:"Account Open Service",
-
-description:
-"Account opening assistance ke liye neeche apni basic details fill karein.",
-
-extraLabel:
-"Account Opening Requirement",
-
-extraPlaceholder:
-"Account opening se related requirement likhein."
-
-}
-
-};
-
-
-let currentService = "";
-
-
-/* =========================
-   OPEN SERVICE
-========================= */
-
-function openService(id){
-
-const service = services[id];
-
-if(!service) return;
-
-currentService = id;
-
-document.getElementById("homePage").hidden = true;
-
-document.getElementById("detailPage").hidden = false;
-
-
-document.getElementById("serviceIcon").textContent =
-service.icon;
-
-document.getElementById("serviceTitle").textContent =
-service.title;
-
-document.getElementById("serviceDescription").textContent =
-service.description;
-
-
-document.getElementById("extraLabel").textContent =
-service.extraLabel;
-
-document.getElementById("extraDetails").placeholder =
-service.extraPlaceholder;
-
-
-history.pushState(
-{service:id},
-"",
-"#service-" + id
-);
-
-window.scrollTo(0,0);
-
-}
-
-
-/* =========================
-   SEND WHATSAPP
-========================= */
-
-function sendToWhatsApp(){
-
-const name =
-document.getElementById("customerName").value.trim();
-
-const mobile =
-document.getElementById("customerMobile").value.trim();
-
-const shop =
-document.getElementById("shopName").value.trim();
-
-const city =
-document.getElementById("city").value.trim();
-
-const address =
-document.getElementById("customerAddress").value.trim();
-
-const extra =
-document.getElementById("extraDetails").value.trim();
-
-
-if(!name){
-
-alert("Please apna naam enter karein.");
-
-return;
-
-}
-
-
-if(!/^[0-9]{10}$/.test(mobile)){
-
-alert("Please valid 10 digit mobile number enter karein.");
-
-return;
-
-}
-
-
-const serviceName =
-services[currentService].title;
-
-
-let message =
-
-"🔔 VSS MARKET - New Service Request\n\n" +
-
-"📌 Service: " +
-serviceName +
-"\n\n" +
-
-"👤 Name: " +
-name +
-"\n" +
-
-"📱 Mobile: " +
-mobile +
-"\n" +
-
-"🏪 Shop/Business: " +
-(shop || "Not Provided") +
-"\n" +
-
-"🏙️ City/District: " +
-(city || "Not Provided") +
-"\n" +
-
-"📍 Address: " +
-(address || "Not Provided") +
-"\n\n" +
-
-"📝 Requirement:\n" +
-(extra || "Not Provided") +
-
-"\n\n" +
-
-"Thank You\n" +
-"VSS MARKET";
-
-
-const whatsappNumber =
-"918092923463";
-
-
-const whatsappURL =
-
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.open(
-whatsappURL,
-"_blank"
-);
-
-}
-
-
-/* =========================
-   SHOW HOME
-========================= */
-
-function showHome(){
-
-document.getElementById("detailPage").hidden = true;
-
-document.getElementById("homePage").hidden = false;
-
-window.scrollTo(0,0);
-
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-window.addEventListener(
-"popstate",
-function(){
-
-showHome();
-
-}
-);
-
-</script>
-
-</body>
-</html>
+<div class
