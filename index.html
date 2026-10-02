@@ -5,16 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VSS MARKET INDIA | Digital & Financial Services</title>
+<title>VIKASH SOFTWARE SALUTATIONS PVT LTD | Digital & Financial Services</title>
 
 <meta name="description"
-content="VSS MARKET INDIA - Loan, PAN Card ID, Bike Insurance, Credit Card, AEPS ID and Account Opening Services.">
+content="VIKASH SOFTWARE SALUTATIONS PVT LTD - Digital and Financial Services.">
 
 <style>
-
-/* =====================================================
-   GLOBAL
-===================================================== */
 
 *{
     margin:0;
@@ -37,10 +33,7 @@ a{
     text-decoration:none;
 }
 
-button,
-input,
-textarea,
-select{
+button,input,textarea{
     font-family:inherit;
 }
 
@@ -48,10 +41,7 @@ button{
     cursor:pointer;
 }
 
-
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 .header{
     background:#fff;
@@ -83,14 +73,13 @@ button{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
 }
 
 .brand h1{
     color:#0756b7;
-    font-size:29px;
+    font-size:24px;
     font-weight:900;
-    letter-spacing:.5px;
+    letter-spacing:.3px;
 }
 
 .brand h1 span{
@@ -99,7 +88,7 @@ button{
 
 .brand p{
     color:#69778e;
-    font-size:11px;
+    font-size:10px;
     font-weight:bold;
     letter-spacing:1px;
 }
@@ -120,10 +109,7 @@ button{
     font-weight:900;
 }
 
-
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* NAVBAR */
 
 .navbar{
     background:linear-gradient(90deg,#062b6d,#075dc5);
@@ -143,7 +129,6 @@ button{
     font-weight:bold;
     padding:10px 17px;
     border-radius:25px;
-    transition:.25s;
 }
 
 .navbar a:hover{
@@ -151,13 +136,37 @@ button{
 }
 
 .nav-inquiry{
-    background:#16c76a !important;
+    background:#16c76a!important;
 }
 
+/* USER BAR */
 
-/* =====================================================
-   HERO
-===================================================== */
+.user-bar{
+    display:none;
+    background:#e9f7ef;
+    border-bottom:1px solid #ccebd8;
+    padding:10px 6%;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.user-info{
+    color:#146b3a;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.logout-btn{
+    border:0;
+    background:#d92d20;
+    color:white;
+    padding:8px 15px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+/* HERO */
 
 .hero{
     max-width:1200px;
@@ -165,25 +174,13 @@ button{
     padding:60px 7%;
     min-height:460px;
     border-radius:25px;
-
     background:
-        radial-gradient(
-            circle at 85% 35%,
-            rgba(39,171,255,.30),
-            transparent 30%
-        ),
-        linear-gradient(
-            120deg,
-            #dff4ff,
-            #ffffff,
-            #cceaff
-        );
-
+    radial-gradient(circle at 85% 35%,rgba(39,171,255,.30),transparent 30%),
+    linear-gradient(120deg,#dff4ff,#fff,#cceaff);
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:45px;
-    overflow:hidden;
 }
 
 .hero-content{
@@ -203,7 +200,7 @@ button{
 
 .hero h2{
     color:#123b80;
-    font-size:44px;
+    font-size:42px;
     line-height:1.15;
     margin-bottom:15px;
 }
@@ -233,11 +230,6 @@ button{
     border-radius:9px;
     font-weight:bold;
     border:0;
-    transition:.25s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
 }
 
 .btn-primary{
@@ -250,10 +242,7 @@ button{
     color:#fff;
 }
 
-
-/* =====================================================
-   HERO CARD
-===================================================== */
+/* HERO CARD */
 
 .hero-card{
     width:300px;
@@ -271,7 +260,6 @@ button{
     border-radius:50%;
     overflow:hidden;
     margin:0 auto 15px;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
 .hero-card-logo img{
@@ -282,19 +270,15 @@ button{
 
 .hero-card h3{
     color:#123b80;
-    font-size:22px;
+    font-size:19px;
 }
 
 .hero-card p{
     color:#69778e;
     font-size:13px;
-    margin-top:5px;
 }
 
-
-/* =====================================================
-   TRUST BAR
-===================================================== */
+/* TRUST */
 
 .trust{
     max-width:1100px;
@@ -303,7 +287,6 @@ button{
     background:#fff;
     border-radius:15px;
     box-shadow:0 5px 20px rgba(0,30,80,.07);
-
     display:flex;
     align-items:center;
     justify-content:center;
@@ -321,10 +304,7 @@ button{
     font-size:14px;
 }
 
-
-/* =====================================================
-   COMMON SECTION
-===================================================== */
+/* SECTIONS */
 
 section{
     max-width:1200px;
@@ -356,10 +336,7 @@ section{
     margin-top:6px;
 }
 
-
-/* =====================================================
-   SERVICES
-===================================================== */
+/* SERVICES */
 
 .services{
     display:grid;
@@ -378,9 +355,8 @@ section{
 }
 
 .service:hover{
-    transform:translateY(-7px);
+    transform:translateY(-5px);
     box-shadow:0 15px 35px rgba(0,30,80,.13);
-    border-color:#b8d7ff;
 }
 
 .service-icon{
@@ -419,14 +395,7 @@ section{
     border:0;
 }
 
-.service-btn:hover{
-    background:#043f88;
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
+/* ABOUT */
 
 .about{
     display:grid;
@@ -468,10 +437,7 @@ section{
     font-weight:bold;
 }
 
-
-/* =====================================================
-   FOUNDER
-===================================================== */
+/* FOUNDER */
 
 .founder-card{
     max-width:900px;
@@ -483,7 +449,6 @@ section{
     align-items:center;
     gap:35px;
     box-shadow:0 10px 35px rgba(0,30,80,.10);
-    border:1px solid #e5ebf4;
 }
 
 .founder-avatar{
@@ -498,13 +463,11 @@ section{
     justify-content:center;
     font-size:44px;
     font-weight:900;
-    box-shadow:0 12px 30px rgba(7,86,183,.25);
 }
 
 .founder-info h2{
     color:#123b80;
     font-size:29px;
-    margin-bottom:4px;
 }
 
 .founder-info h4{
@@ -534,10 +497,7 @@ section{
     font-weight:bold;
 }
 
-
-/* =====================================================
-   CONTACT
-===================================================== */
+/* CONTACT */
 
 .contact-section{
     background:linear-gradient(135deg,#e7f5ff,#fff);
@@ -567,10 +527,7 @@ section{
     margin-bottom:18px;
 }
 
-
-/* =====================================================
-   INQUIRY PAGE
-===================================================== */
+/* SERVICE PAGE */
 
 #servicePage{
     display:none;
@@ -578,7 +535,7 @@ section{
 
 .form-container{
     max-width:850px;
-    margin:auto;
+    margin:40px auto;
     background:#fff;
     border-radius:22px;
     padding:35px;
@@ -620,7 +577,6 @@ section{
 
 .selected-service p{
     color:#69778e;
-    margin-top:5px;
 }
 
 .form{
@@ -642,8 +598,7 @@ section{
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select{
+.form-group textarea{
     width:100%;
     padding:13px 14px;
     border:1px solid #d2dce9;
@@ -658,17 +613,6 @@ section{
     resize:vertical;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus{
-    border-color:#1688ee;
-    box-shadow:0 0 0 3px rgba(22,136,238,.1);
-}
-
-.required{
-    color:red;
-}
-
 .submit{
     width:100%;
     border:0;
@@ -680,10 +624,6 @@ section{
     font-size:16px;
 }
 
-.submit:hover{
-    background:#0eae59;
-}
-
 .note{
     text-align:center;
     color:#7b8799;
@@ -691,10 +631,114 @@ section{
     margin-top:10px;
 }
 
+/* LOGIN GATE */
 
-/* =====================================================
-   FOOTER
-===================================================== */
+.account-gate{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#031b42,#075dc5);
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.auth-box{
+    width:100%;
+    max-width:430px;
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.auth-logo{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:0 auto 12px;
+}
+
+.auth-logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.auth-box h2{
+    text-align:center;
+    color:#123b80;
+    font-size:23px;
+}
+
+.auth-box .subtitle{
+    text-align:center;
+    color:#69778e;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.auth-tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:20px;
+}
+
+.auth-tabs button{
+    width:50%;
+    padding:11px;
+    border:1px solid #d5dfeb;
+    background:#f5f8fc;
+    border-radius:8px;
+    font-weight:bold;
+    color:#345;
+}
+
+.auth-tabs button.active{
+    background:#0756b7;
+    color:#fff;
+    border-color:#0756b7;
+}
+
+.auth-form{
+    display:none;
+}
+
+.auth-form.active{
+    display:block;
+}
+
+.auth-form input{
+    width:100%;
+    padding:13px;
+    margin-bottom:12px;
+    border:1px solid #d2dce9;
+    border-radius:8px;
+    outline:none;
+}
+
+.auth-submit{
+    width:100%;
+    padding:13px;
+    border:0;
+    border-radius:8px;
+    background:#0756b7;
+    color:#fff;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.auth-msg{
+    text-align:center;
+    font-size:13px;
+    font-weight:bold;
+    margin-top:12px;
+    min-height:20px;
+}
+
+/* FOOTER */
 
 footer{
     background:#031b42;
@@ -703,20 +747,13 @@ footer{
     padding:35px 15px;
 }
 
-footer h2{
-    font-size:23px;
-}
-
 footer p{
     color:#b9cbe5;
     font-size:13px;
     margin-top:5px;
 }
 
-
-/* =====================================================
-   FLOATING WHATSAPP
-===================================================== */
+/* WHATSAPP */
 
 .whatsapp-float{
     position:fixed;
@@ -733,17 +770,9 @@ footer p{
     font-size:29px;
     box-shadow:0 8px 25px rgba(0,0,0,.25);
     z-index:2000;
-    transition:.25s;
 }
 
-.whatsapp-float:hover{
-    transform:scale(1.08);
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:850px){
 
@@ -763,7 +792,7 @@ footer p{
     }
 
     .hero h2{
-        font-size:35px;
+        font-size:32px;
     }
 
     .hero-buttons{
@@ -781,22 +810,21 @@ footer p{
     .founder-card{
         margin:0 10px;
     }
-
 }
 
 @media(max-width:600px){
 
     .brand h1{
-        font-size:22px;
+        font-size:17px;
     }
 
     .brand p{
-        font-size:9px;
+        font-size:8px;
     }
 
     .logo{
-        width:58px;
-        height:58px;
+        width:55px;
+        height:55px;
     }
 
     .navbar{
@@ -813,11 +841,7 @@ footer p{
     }
 
     .hero h2{
-        font-size:29px;
-    }
-
-    .hero p{
-        font-size:14px;
+        font-size:28px;
     }
 
     .hero-card{
@@ -849,54 +873,185 @@ footer p{
         padding:18px 14px;
     }
 
-    .phone{
-        font-size:23px;
-    }
-
     .founder-card{
         flex-direction:column;
         text-align:center;
         padding:28px 20px;
     }
 
-    .founder-info h2{
-        font-size:23px;
-    }
-
-    .founder-points{
-        justify-content:center;
-    }
-
-}
-
-[hidden]{
-    display:none!important;
 }
 
 </style>
-
 </head>
-
 
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- ================= LOGIN / SIGNUP ================= -->
+
+<div class="account-gate" id="accountGate">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">
+            <img src="34713.png" alt="Logo">
+        </div>
+
+        <h2>VIKASH SOFTWARE SALUTATIONS PVT LTD</h2>
+
+        <p class="subtitle">
+            Website access ke liye account banayein ya login karein
+        </p>
+
+        <div class="auth-tabs">
+
+            <button
+                id="loginTab"
+                class="active"
+                onclick="showAuth('login')">
+
+                Login
+
+            </button>
+
+            <button
+                id="signupTab"
+                onclick="showAuth('signup')">
+
+                Create Account
+
+            </button>
+
+        </div>
+
+
+        <!-- LOGIN -->
+
+        <form
+            id="loginForm"
+            class="auth-form active"
+            onsubmit="loginUser(event)">
+
+            <input
+                type="text"
+                id="loginUserId"
+                placeholder="User ID"
+                required>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                required>
+
+            <button
+                class="auth-submit"
+                type="submit">
+
+                🔐 Login
+
+            </button>
+
+        </form>
+
+
+        <!-- SIGNUP -->
+
+        <form
+            id="signupForm"
+            class="auth-form"
+            onsubmit="signupUser(event)">
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                id="signupMobile"
+                placeholder="10 Digit Mobile Number"
+                maxlength="10"
+                required>
+
+            <input
+                type="text"
+                id="signupUserId"
+                placeholder="Create User ID"
+                required>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create Password"
+                required>
+
+            <button
+                class="auth-submit"
+                type="submit">
+
+                📝 Create Account
+
+            </button>
+
+        </form>
+
+
+        <div
+            id="authMsg"
+            class="auth-msg">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= USER BAR ================= -->
+
+<div class="user-bar" id="userBar">
+
+    <div class="user-info">
+
+        👤 Welcome,
+        <span id="loggedUserName"></span>
+
+        &nbsp; | &nbsp;
+
+        🆔 <span id="loggedUserId"></span>
+
+    </div>
+
+    <button
+        class="logout-btn"
+        onclick="logoutUser()">
+
+        Logout
+
+    </button>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
     <div class="logo-area">
 
         <div class="logo">
-            <img src="34713.png" alt="VSS MARKET INDIA Logo">
+
+            <img
+                src="34713.png"
+                alt="VIKASH SOFTWARE SALUTATIONS PVT LTD">
+
         </div>
 
         <div class="brand">
 
             <h1>
-                VSS <span>MARKET INDIA</span>
+                VIKASH <span>SOFTWARE SALUTATIONS PVT LTD</span>
             </h1>
 
             <p>
@@ -921,9 +1076,7 @@ footer p{
 </header>
 
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
@@ -959,23 +1112,17 @@ footer p{
 </nav>
 
 
-<!-- =====================================================
-     HOME PAGE
-===================================================== -->
+<!-- ================= HOME ================= -->
 
 <main id="homePage">
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <div class="hero" id="home">
 
     <div class="hero-content">
 
         <div class="badge">
-            WELCOME TO VSS MARKET INDIA
+            WELCOME TO VIKASH SOFTWARE SALUTATIONS PVT LTD
         </div>
 
         <h2>
@@ -990,11 +1137,9 @@ footer p{
 
             Loan, PAN Card ID, Bike Insurance,
             Credit Card, AEPS ID aur Account Opening
-            jaise services ke liye VSS MARKET INDIA
-            se contact karein.
+            jaise services ke liye humse contact karein.
 
         </p>
-
 
         <div class="hero-buttons">
 
@@ -1005,7 +1150,6 @@ footer p{
                 View Services
 
             </a>
-
 
             <button
                 class="btn btn-whatsapp"
@@ -1026,12 +1170,12 @@ footer p{
 
             <img
                 src="34713.png"
-                alt="VSS MARKET INDIA">
+                alt="Company Logo">
 
         </div>
 
         <h3>
-            VSS MARKET INDIA
+            VIKASH SOFTWARE SALUTATIONS PVT LTD
         </h3>
 
         <p>
@@ -1054,58 +1198,31 @@ footer p{
 </div>
 
 
-<!-- =====================================================
-     TRUST
-===================================================== -->
+<!-- TRUST -->
 
 <div class="trust">
 
-    <strong>
-        Our Services:
-    </strong>
+    <strong>Our Services:</strong>
 
-    <div class="trust-item">
-        ✓ Loan
-    </div>
-
-    <div class="trust-item">
-        ✓ PAN Card
-    </div>
-
-    <div class="trust-item">
-        ✓ Bike Insurance
-    </div>
-
-    <div class="trust-item">
-        ✓ Credit Card
-    </div>
-
-    <div class="trust-item">
-        ✓ AEPS
-    </div>
-
-    <div class="trust-item">
-        ✓ Account Opening
-    </div>
+    <div class="trust-item">✓ Loan</div>
+    <div class="trust-item">✓ PAN Card</div>
+    <div class="trust-item">✓ Bike Insurance</div>
+    <div class="trust-item">✓ Credit Card</div>
+    <div class="trust-item">✓ AEPS</div>
+    <div class="trust-item">✓ Account Opening</div>
 
 </div>
 
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
+<!-- SERVICES -->
 
 <section id="services">
 
     <div class="heading">
 
-        <span>
-            What We Offer
-        </span>
+        <span>What We Offer</span>
 
-        <h2>
-            Our Services
-        </h2>
+        <h2>Our Services</h2>
 
         <p>
             Apni requirement ke according service select karein.
@@ -1117,21 +1234,14 @@ footer p{
     <div class="services">
 
 
-        <!-- LOAN -->
-
         <div class="service">
 
-            <div class="service-icon">
-                💰
-            </div>
+            <div class="service-icon">💰</div>
 
-            <h3>
-                Loan Service
-            </h3>
+            <h3>Loan Service</h3>
 
             <p>
-                Loan related information aur
-                enquiry assistance ke liye contact karein.
+                Loan related information aur enquiry assistance.
             </p>
 
             <button
@@ -1145,21 +1255,14 @@ footer p{
         </div>
 
 
-        <!-- PAN -->
-
         <div class="service">
 
-            <div class="service-icon">
-                🪪
-            </div>
+            <div class="service-icon">🪪</div>
 
-            <h3>
-                PAN Card ID Service
-            </h3>
+            <h3>PAN Card ID Service</h3>
 
             <p>
-                PAN card service aur authorised
-                assistance ke liye enquiry karein.
+                PAN card service aur authorised assistance.
             </p>
 
             <button
@@ -1170,1373 +1273,4 @@ footer p{
 
             </button>
 
-        </div>
-
-
-        <!-- INSURANCE -->
-
-        <div class="service">
-
-            <div class="service-icon">
-                🏍️
-            </div>
-
-            <h3>
-                Bike Insurance
-            </h3>
-
-            <p>
-                Bike insurance related quotation
-                aur assistance ke liye contact karein.
-            </p>
-
-            <button
-                class="service-btn"
-                onclick="openService('insurance')">
-
-                Enquire Now →
-
-            </button>
-
-        </div>
-
-
-        <!-- CREDIT CARD -->
-
-        <div class="service">
-
-            <div class="service-icon">
-                💳
-            </div>
-
-            <h3>
-                Credit Card Service
-            </h3>
-
-            <p>
-                Available credit card options aur
-                application information ke liye enquiry karein.
-            </p>
-
-            <button
-                class="service-btn"
-                onclick="openService('credit')">
-
-                Enquire Now →
-
-            </button>
-
-        </div>
-
-
-        <!-- AEPS -->
-
-        <div class="service">
-
-            <div class="service-icon">
-                🏧
-            </div>
-
-            <h3>
-                AEPS ID Service
-            </h3>
-
-            <p>
-                AEPS retailer ID related service
-                aur enquiry ke liye contact karein.
-            </p>
-
-            <button
-                class="service-btn"
-                onclick="openService('aeps')">
-
-                Enquire Now →
-
-            </button>
-
-        </div>
-
-
-        <!-- ACCOUNT -->
-
-        <div class="service">
-
-            <div class="service-icon">
-                🏦
-            </div>
-
-            <h3>
-                Account Open Service
-            </h3>
-
-            <p>
-                Account opening assistance aur
-                service information ke liye enquiry karein.
-            </p>
-
-            <button
-                class="service-btn"
-                onclick="openService('account')">
-
-                Enquire Now →
-
-            </button>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section id="about">
-
-    <div class="about">
-
-
-        <div class="about-box">
-
-            <h3>
-                About VSS MARKET INDIA
-            </h3>
-
-            <p>
-
-                VSS MARKET INDIA ek digital service platform hai
-                jahan customers ko different digital aur financial
-                service categories ke baare mein information aur
-                enquiry assistance di jaati hai.
-
-            </p>
-
-
-            <div class="points">
-
-                <div class="point">
-                    ✓ Easy Enquiry
-                </div>
-
-                <div class="point">
-                    ✓ WhatsApp Support
-                </div>
-
-                <div class="point">
-                    ✓ Simple Process
-                </div>
-
-                <div class="point">
-                    ✓ Quick Assistance
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="about-box">
-
-            <h3>
-                Why Contact Us?
-            </h3>
-
-            <p>
-
-                Apni requirement ke according service select karein,
-                basic details submit karein aur WhatsApp ke through
-                hamari team se contact karein.
-
-            </p>
-
-
-            <div class="points">
-
-                <div class="point">
-                    🔒 Secure Enquiry
-                </div>
-
-                <div class="point">
-                    📱 WhatsApp Support
-                </div>
-
-                <div class="point">
-                    ⚡ Quick Response
-                </div>
-
-                <div class="point">
-                    🤝 Customer Assistance
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOUNDER & DIRECTOR
-===================================================== -->
-
-<section id="founder">
-
-    <div class="heading">
-
-        <span>
-            Our Leadership
-        </span>
-
-        <h2>
-            Founder & Director
-        </h2>
-
-        <p>
-            VSS MARKET INDIA ke Founder & Director
-        </p>
-
-    </div>
-
-
-    <div class="founder-card">
-
-        <div class="founder-avatar">
-            VK
-        </div>
-
-
-        <div class="founder-info">
-
-            <h2>
-                VIKAHS KUMAR SHARMA
-            </h2>
-
-            <h4>
-                Founder & Director
-            </h4>
-
-            <p>
-
-                VSS MARKET INDIA ke Founder & Director
-                <strong>VIKAHS KUMAR SHARMA</strong> hain.
-                Digital aur financial services ko customers
-                tak simple aur professional tareeke se
-                pahunchane ke liye VSS MARKET INDIA
-                ka platform develop kiya gaya hai.
-
-            </p>
-
-
-            <div class="founder-points">
-
-                <span>
-                    ✓ Digital Services
-                </span>
-
-                <span>
-                    ✓ Customer Assistance
-                </span>
-
-                <span>
-                    ✓ Professional Support
-                </span>
-
-                <span>
-                    ✓ WhatsApp Inquiry
-                </span>
-
-            </div>
-
-
-            <button
-                class="btn btn-primary"
-                onclick="openInquiry()">
-
-                📋 Make an Inquiry
-
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section
-    id="contact"
-    class="contact-section">
-
-    <div class="contact-box">
-
-        <h2>
-            Need Any Service?
-        </h2>
-
-        <p>
-
-            Service ki jaankari ya enquiry ke liye
-            WhatsApp par contact karein.
-
-        </p>
-
-
-        <div class="phone">
-            +91 80929 23463
-        </div>
-
-
-        <a
-            href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET%20INDIA%2C%20mujhe%20service%20ke%20baare%20mein%20jaankari%20chahiye."
-            target="_blank"
-            class="btn btn-whatsapp">
-
-            💬 Chat on WhatsApp
-
-        </a>
-
-
-        <br><br>
-
-
-        <button
-            onclick="openInquiry()"
-            class="btn btn-primary">
-
-            📋 Open Inquiry Form
-
-        </button>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-<!-- =====================================================
-     INQUIRY PAGE
-===================================================== -->
-
-<main id="servicePage">
-
-<section id="inquiry">
-
-    <div class="form-container">
-
-
-        <button
-            class="back-btn"
-            onclick="showHome()">
-
-            ← Back to Website
-
-        </button>
-
-
-        <div class="selected-service">
-
-            <div class="selected-icon">
-                📋
-            </div>
-
-            <h2>
-                Service Inquiry
-            </h2>
-
-            <p>
-
-                Apni details fill karein.
-                Aapki inquiry WhatsApp ke through
-                VSS MARKET INDIA ko bheji jayegi.
-
-            </p>
-
-        </div>
-
-
-        <div class="form">
-
-
-            <!-- SERVICE -->
-
-            <div class="form-group">
-
-                <label>
-                    Select Service
-                    <span class="required">*</span>
-                </label>
-
-                <select id="inquiryService">
-
-                    <option value="">
-                        -- Select Service --
-                    </option>
-
-                    <option value="Loan Service">
-                        Loan Service
-                    </option>
-
-                    <option value="PAN Card ID Service">
-                        PAN Card ID Service
-                    </option>
-
-                    <option value="Bike Insurance Service">
-                        Bike Insurance Service
-                    </option>
-
-                    <option value="Credit Card Service">
-                        Credit Card Service
-                    </option>
-
-                    <option value="AEPS ID Service">
-                        AEPS ID Service
-                    </option>
-
-                    <option value="Account Open Service">
-                        Account Open Service
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- NAME -->
-
-            <div class="form-group">
-
-                <label>
-                    Full Name
-                    <span class="required">*</span>
-                </label>
-
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Apna naam likhein">
-
-            </div>
-
-
-            <!-- MOBILE -->
-
-            <div class="form-group">
-
-                <label>
-                    Mobile Number
-                    <span class="required">*</span>
-                </label>
-
-                <input
-                    type="tel"
-                    id="mobile"
-                    maxlength="10"
-                    inputmode="numeric"
-                    placeholder="10 digit mobile number">
-
-            </div>
-
-
-            <!-- CITY -->
-
-            <div class="form-group">
-
-                <label>
-                    City / District
-                </label>
-
-                <input
-                    type="text"
-                    id="city"
-                    placeholder="Jaise: Bhagalpur">
-
-            </div>
-
-
-            <!-- SHOP -->
-
-            <div class="form-group">
-
-                <label>
-                    Shop / Business Name
-                </label>
-
-                <input
-                    type="text"
-                    id="shop"
-                    placeholder="Shop ya business name">
-
-            </div>
-
-
-            <!-- MESSAGE -->
-
-            <div class="form-group">
-
-                <label>
-                    Requirement / Message
-                </label>
-
-                <textarea
-                    id="message"
-                    placeholder="Apni requirement likhein"></textarea>
-
-            </div>
-
-
-            <!-- SUBMIT -->
-
-            <button
-                class="submit"
-                onclick="sendWhatsApp()">
-
-                🟢 Submit Inquiry on WhatsApp
-
-            </button>
-
-
-            <div class="note">
-
-                Submit karne par WhatsApp open hoga
-                aur enquiry message ready ho jayega.
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <h2>
-        VSS MARKET INDIA
-    </h2>
-
-    <p>
-        Digital & Financial Services
-    </p>
-
-    <p>
-        Founder & Director: VIKAHS KUMAR SHARMA
-    </p>
-
-    <p>
-        Contact: +91 80929 23463
-    </p>
-
-    <p>
-        © 2026 VSS MARKET INDIA. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- =====================================================
-     FLOATING WHATSAPP
-===================================================== -->
-
-<a
-    class="whatsapp-float"
-    href="https://wa.me/918092923463?text=Hello%20VSS%20MARKET%20INDIA%2C%20mujhe%20service%20ke%20baare%20mein%20jaankari%20chahiye."
-    target="_blank"
-    aria-label="WhatsApp">
-
-    💬
-
-</a>
-
-
-<script>
-
-/* =====================================================
-   SERVICES DATA
-===================================================== */
-
-const services = {
-
-    loan:{
-        icon:"💰",
-        title:"Loan Service",
-        description:
-        "Loan related information aur enquiry assistance ke liye apni basic details submit karein."
-    },
-
-    pan:{
-        icon:"🪪",
-        title:"PAN Card ID Service",
-        description:
-        "PAN card related service aur authorised assistance ke liye apni enquiry submit karein."
-    },
-
-    insurance:{
-        icon:"🏍️",
-        title:"Bike Insurance Service",
-        description:
-        "Bike insurance related quotation aur service information ke liye enquiry submit karein."
-    },
-
-    credit:{
-        icon:"💳",
-        title:"Credit Card Service",
-        description:
-        "Credit card options aur application information ke liye apni basic details submit karein."
-    },
-
-    aeps:{
-        icon:"🏧",
-        title:"AEPS ID Service",
-        description:
-        "AEPS retailer ID related enquiry ke liye apni basic details submit karein."
-    },
-
-    account:{
-        icon:"🏦",
-        title:"Account Open Service",
-        description:
-        "Account opening assistance ke liye apni basic details aur requirement submit karein."
-    }
-
-};
-
-
-/* =====================================================
-   OPEN SERVICE
-===================================================== */
-
-function openService(id){
-
-    if(!services[id]) return;
-
-    document.getElementById("homePage").style.display = "none";
-
-    document.getElementById("servicePage").style.display = "block";
-
-    document.getElementById("inquiryService").value =
-        services[id].title;
-
-    document.querySelector(".selected-service h2").textContent =
-        services[id].title;
-
-    document.querySelector(".selected-service p").textContent =
-        services[id].description;
-
-    document.querySelector(".selected-icon").textContent =
-        services[id].icon;
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =====================================================
-   OPEN GENERAL INQUIRY
-===================================================== */
-
-function openInquiry(){
-
-    document.getElementById("homePage").style.display =
-        "none";
-
-    document.getElementById("servicePage").style.display =
-        "block";
-
-    document.getElementById("inquiryService").value = "";
-
-    document.querySelector(".selected-icon").textContent =
-        "📋";
-
-    document.querySelector(".selected-service h2").textContent =
-        "Service Inquiry";
-
-    document.querySelector(".selected-service p").textContent =
-        "Apni details fill karein. Aapki inquiry WhatsApp ke through VSS MARKET INDIA ko bheji jayegi.";
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =====================================================
-   SEND WHATSAPP
-===================================================== */
-
-function sendWhatsApp(){
-
-    const service =
-        document.getElementById("inquiryService").value.trim();
-
-    const name =
-        document.getElementById("name").value.trim();
-
-    const mobile =
-        document.getElementById("mobile").value.trim();
-
-    const city =
-        document.getElementById("city").value.trim();
-
-    const shop =
-        document.getElementById("shop").value.trim();
-
-    const messageText =
-        document.getElementById("message").value.trim();
-
-
-    if(!service){
-
-        alert("Please service select karein.");
-
-        return;
-    }
-
-
-    if(!name){
-
-        alert("Please apna naam enter karein.");
-
-        return;
-    }
-
-
-    if(!/^[0-9]{10}$/.test(mobile)){
-
-        alert("Please valid 10 digit mobile number enter karein.");
-
-        return;
-    }
-
-
-    const whatsappMessage =
-
-`🔔 VSS MARKET INDIA
-━━━━━━━━━━━━━━━━━━━━
-
-📋 NEW SERVICE INQUIRY
-
-📌 Service:
-${service}
-
-👤 Customer Name:
-${name}
-
-📱 Mobile:
-${mobile}
-
-🏙️ City / District:
-${city || "Not Provided"}
-
-🏪 Shop / Business:
-${shop || "Not Provided"}
-
-📝 Requirement:
-${messageText || "Not Provided"}
-
-━━━━━━━━━━━━━━━━━━━━
-
-👨‍💼 Founder & Director:
-VIKAHS KUMAR SHARMA
-
-📞 VSS MARKET INDIA
-+91 80929 23463`;
-
-
-    const url =
-        "https://wa.me/918092923463?text=" +
-        encodeURIComponent(whatsappMessage);
-
-
-    window.open(url,"_blank");
-
-}
-
-
-/* =====================================================
-   SHOW HOME
-===================================================== */
-
-function showHome(){
-
-    document.getElementById("servicePage").style.display =
-        "none";
-
-    document.getElementById("homePage").style.display =
-        "block";
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =====================================================
-   MOBILE NUMBER - ONLY NUMBERS
-===================================================== */
-
-document.getElementById("mobile").addEventListener(
-    "input",
-    function(){
-
-        this.value =
-            this.value.replace(/[^0-9]/g,"");
-
-    }
-);
-<script>
-const services = {
-  loan: {
-    icon: "💰",
-    title: "Loan Service",
-    description: "Loan related information aur enquiry assistance ke liye apni basic details submit karein."
-  },
-  pan: {
-    icon: "🪪",
-    title: "PAN Card ID Service",
-    description: "PAN card related service aur authorised assistance ke liye apni enquiry submit karein."
-  },
-  insurance: {
-    icon: "🏍️",
-    title: "Bike Insurance Service",
-    description: "Bike insurance related quotation aur service information ke liye enquiry submit karein."
-  },
-  credit: {
-    icon: "💳",
-    title: "Credit Card Service",
-    description: "Credit card options aur application information ke liye apni basic details submit karein."
-  },
-  aeps: {
-    icon: "🏧",
-    title: "AEPS ID Service",
-    description: "AEPS retailer ID related enquiry ke liye apni basic details submit karein."
-  },
-  account: {
-    icon: "🏦",
-    title: "Account Open Service",
-    description: "Account opening assistance ke liye apni basic details aur requirement submit karein."
-  }
-};
-
-let currentService = "loan";
-let loggedInUser = null;
-
-
-/* =========================
-   SERVICE SYSTEM
-========================= */
-
-function openService(id) {
-  if (!services[id]) return;
-
-  currentService = id;
-
-  const service = services[id];
-
-  document.getElementById("homePage").style.display = "none";
-  document.getElementById("servicePage").style.display = "block";
-
-  document.getElementById("selectedIcon").textContent = service.icon;
-  document.getElementById("selectedTitle").textContent = service.title;
-  document.getElementById("selectedDescription").textContent =
-    service.description;
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-
-
-function openInquiry() {
-  openService("loan");
-}
-
-
-function showHome() {
-  document.getElementById("servicePage").style.display = "none";
-  document.getElementById("homePage").style.display = "block";
-
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }, 10);
-}
-
-
-/* =========================
-   USER ACCOUNT SYSTEM
-========================= */
-
-function getUsers() {
-  try {
-    return JSON.parse(
-      localStorage.getItem("vss_market_users") || "{}"
-    );
-  } catch (e) {
-    return {};
-  }
-}
-
-
-function saveUsers(users) {
-  localStorage.setItem(
-    "vss_market_users",
-    JSON.stringify(users)
-  );
-}
-
-
-/* =========================
-   LOGIN / SIGNUP TABS
-========================= */
-
-function showAuth(type) {
-
-  const loginForm =
-    document.getElementById("loginForm");
-
-  const signupForm =
-    document.getElementById("signupForm");
-
-  const loginTab =
-    document.getElementById("loginTab");
-
-  const signupTab =
-    document.getElementById("signupTab");
-
-  const msg =
-    document.getElementById("authMsg");
-
-  msg.textContent = "";
-  msg.style.color = "";
-
-  if (type === "signup") {
-
-    loginForm.style.display = "none";
-    signupForm.style.display = "block";
-
-    loginTab.classList.remove("active");
-    signupTab.classList.add("active");
-
-  } else {
-
-    loginForm.style.display = "block";
-    signupForm.style.display = "none";
-
-    signupTab.classList.remove("active");
-    loginTab.classList.add("active");
-  }
-}
-
-
-/* =========================
-   SIGNUP
-========================= */
-
-function signupUser(e) {
-
-  e.preventDefault();
-
-  const name =
-    document.getElementById("signupName")
-      .value.trim();
-
-  const mobile =
-    document.getElementById("signupMobile")
-      .value.trim();
-
-  const userId =
-    document.getElementById("signupUserId")
-      .value.trim();
-
-  const password =
-    document.getElementById("signupPassword")
-      .value;
-
-
-  if (!/^[0-9]{10}$/.test(mobile)) {
-
-    showAuthMsg(
-      "Please valid 10 digit mobile number enter karein.",
-      "#d32f2f"
-    );
-
-    return;
-  }
-
-
-  if (!/^[A-Za-z0-9._-]{4,30}$/.test(userId)) {
-
-    showAuthMsg(
-      "User ID me 4-30 letters/numbers use karein.",
-      "#d32f2f"
-    );
-
-    return;
-  }
-
-
-  if (password.length < 6) {
-
-    showAuthMsg(
-      "Password minimum 6 characters ka hona chahiye.",
-      "#d32f2f"
-    );
-
-    return;
-  }
-
-
-  const users = getUsers();
-
-  const key = userId.toLowerCase();
-
-
-  if (users[key]) {
-
-    showAuthMsg(
-      "Ye User ID already registered hai. Login karein.",
-      "#d32f2f"
-    );
-
-    return;
-  }
-
-
-  users[key] = {
-    name: name,
-    mobile: mobile,
-    userId: userId,
-    password: password
-  };
-
-
-  saveUsers(users);
-
-
-  showAuthMsg(
-    "Account successfully create ho gaya. Ab login karein.",
-    "#0b8f4d"
-  );
-
-
-  document.getElementById("loginUserId").value =
-    userId;
-
-  document.getElementById("loginPassword").value =
-    "";
-
-
-  showAuth("login");
-}
-
-
-/* =========================
-   LOGIN
-========================= */
-
-function loginUser(e) {
-
-  e.preventDefault();
-
-  const userId =
-    document.getElementById("loginUserId")
-      .value.trim();
-
-  const password =
-    document.getElementById("loginPassword")
-      .value;
-
-
-  const users = getUsers();
-
-  const user =
-    users[userId.toLowerCase()];
-
-
-  if (!user || user.password !== password) {
-
-    showAuthMsg(
-      "Invalid User ID ya Password.",
-      "#d32f2f"
-    );
-
-    return;
-  }
-
-
-  loggedInUser = user;
-
-
-  sessionStorage.setItem(
-    "vss_market_logged_user",
-    JSON.stringify(user)
-  );
-
-
-  unlockWebsite();
-}
-
-
-/* =========================
-   UNLOCK WEBSITE
-========================= */
-
-function unlockWebsite() {
-
-  const gate =
-    document.getElementById("accountGate");
-
-  const bar =
-    document.getElementById("userBar");
-
-  const name =
-    document.getElementById("loggedUserName");
-
-  const id =
-    document.getElementById("loggedUserId");
-
-
-  gate.style.display = "none";
-
-  bar.style.display = "flex";
-
-
-  name.textContent =
-    loggedInUser.name;
-
-  id.textContent =
-    loggedInUser.userId;
-}
-
-
-/* =========================
-   LOGOUT
-========================= */
-
-function logoutUser() {
-
-  sessionStorage.removeItem(
-    "vss_market_logged_user"
-  );
-
-  loggedInUser = null;
-
-
-  document.getElementById("userBar")
-    .style.display = "none";
-
-
-  document.getElementById("accountGate")
-    .style.display = "flex";
-
-
-  showAuth("login");
-
-
-  document.getElementById("loginPassword")
-    .value = "";
-}
-
-
-/* =========================
-   LOGIN MESSAGE
-========================= */
-
-function showAuthMsg(message, color) {
-
-  const msg =
-    document.getElementById("authMsg");
-
-  msg.textContent = message;
-
-  msg.style.color = color;
-}
-
-
-/* =========================
-   CHECK LOGIN
-========================= */
-
-function requireLogin() {
-
-  if (!loggedInUser) {
-
-    document.getElementById("accountGate")
-      .style.display = "flex";
-
-    return false;
-  }
-
-  return true;
-}
-
-
-/* =========================
-   WHATSAPP INQUIRY
-========================= */
-
-function sendWhatsApp() {
-
-  if (!requireLogin()) return;
-
-
-  const name =
-    document.getElementById("name")
-      .value.trim();
-
-  const mobile =
-    document.getElementById("mobile")
-      .value.trim();
-
-  const city =
-    document.getElementById("city")
-      .value.trim();
-
-  const shop =
-    document.getElementById("shop")
-      .value.trim();
-
-  const messageText =
-    document.getElementById("message")
-      .value.trim();
-
-
-  if (!name) {
-
-    alert("Please apna naam enter karein.");
-
-    return;
-  }
-
-
-  if (!/^[0-9]{10}$/.test(mobile)) {
-
-    alert(
-      "Please valid 10 digit mobile number enter karein."
-    );
-
-    return;
-  }
-
-
-  const service =
-    services[currentService].title;
-
-
-  const whatsappMessage = `
-🔔 VSS MARKET INDIA
-━━━━━━━━━━━━━━━━━━━━
-
-📌 Service:
-${service}
-
-👤 Website User:
-${loggedInUser.name}
-
-🆔 User ID:
-${loggedInUser.userId}
-
-📞 Registered Mobile:
-${loggedInUser.mobile}
-
-👤 Inquiry Name:
-${name}
-
-📱 Inquiry Mobile:
-${mobile}
-
-🏙️ City / District:
-${city || "Not Provided"}
-
-🏪 Shop / Business:
-${shop || "Not Provided"}
-
-📝 Requirement:
-${messageText || "Not Provided"}
-
-━━━━━━━━━━━━━━━━━━━━
-
-VSS MARKET INDIA
-
-👨‍💼 Founder & Director:
-VIKASH KUMAR SHARMA
-
-📞 +91 80929 23463
-`;
-
-
-  const url =
-    "https://wa.me/918092923463?text=" +
-    encodeURIComponent(whatsappMessage);
-
-
-  window.open(url, "_blank");
-}
-
-
-/* =========================
-   PAGE LOAD
-========================= */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-
-    try {
-
-      const saved =
-        sessionStorage.getItem(
-          "vss_market_logged_user"
-        );
-
-
-      if (saved) {
-
-        loggedInUser =
-          JSON.parse(saved);
-
-        unlockWebsite();
-      }
-
-    } catch (e) {
-
-      console.log(
-        "Login session not found."
-      );
-    }
-
-  }
-);
-
-</script>
-
-</body>
-</html>
+     
